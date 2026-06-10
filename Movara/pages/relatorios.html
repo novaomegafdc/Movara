@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movara - Relatórios</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/relatorios.css">
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>Movara</h2>
+
+        <nav>
+            <a href="dashboard.html">Visão Geral</a>
+            <a href="veiculos.html">Veículos</a>
+            <a href="entrada-saida.html">Entrada/Saída</a>
+            <a href="relatorios.html" class="active">Relatórios</a>
+            <a href="usuarios.html">Usuários</a>
+            <a href="../Index.html">Sair</a>
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Relatórios</h1>
+            <p>Histórico completo das movimentações</p>
+        </header>
+
+        <section class="filtros">
+
+            <input
+                type="text"
+                id="filtroPlaca"
+                placeholder="Filtrar por placa">
+
+            <select id="filtroTipo">
+                <option value="Todos">Todos</option>
+                <option value="Entrada">Entrada</option>
+                <option value="Saída">Saída</option>
+            </select>
+
+            <button id="btnLimpar">
+                Limpar filtros
+            </button>
+
+            <button id="btnExportar">
+                Exportar CSV
+            </button>
+
+        </section>
+
+        <div class="contador">
+            Registros encontrados:
+            <strong id="contadorRegistros">0</strong>
+        </div>
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Tipo</th>
+                        <th>Data/Hora</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaRelatorios"></tbody>
+
+            </table>
+
+        </div>
+
+        <p id="mensagemVazia" class="mensagem-vazia">
+            Nenhum registro encontrado.
+        </p>
+
+    </main>
+
+    <script src="../js/relatorios.js"></script>
+
+</body>
+
+</html>

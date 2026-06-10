@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movara - Usuários</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/usuarios.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>Movara</h2>
+
+        <nav>
+            <a href="dashboard.html">Visão Geral</a>
+            <a href="veiculos.html">Veículos</a>
+            <a href="entrada-saida.html">Entrada/Saída</a>
+            <a href="relatorios.html">Relatórios</a>
+            <a href="usuarios.html" class="active">Usuários</a>
+            <a href="../Index.html">Sair</a>
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Usuários</h1>
+            <p>Gerenciamento de usuários do sistema</p>
+        </header>
+
+        <section class="form-card">
+
+            <input type="text" id="matricula" placeholder="Matrícula">
+
+            <input type="text" id="nome" placeholder="Nome">
+
+            <input type="text" id="cargo" placeholder="Cargo">
+
+            <div class="senha-wrapper">
+                <input type="password" id="senha" placeholder="Senha">
+
+                <button type="button" id="toggleSenha">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+
+            <button id="btnCadastrar">
+                Cadastrar Usuário
+            </button>
+
+        </section>
+
+        <section class="topo-lista">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar por matrícula ou nome">
+
+            <div class="contador">
+                Usuários cadastrados:
+                <strong id="contadorUsuarios">0</strong>
+            </div>
+
+        </section>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="listaUsuarios"></tbody>
+
+        </table>
+
+    </main>
+
+    <div id="modalEditar" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Editar Usuário</h2>
+
+            <input type="text" id="editMatricula">
+
+            <input type="text" id="editNome">
+
+            <input type="text" id="editCargo">
+
+            <input type="password" id="editSenha">
+
+            <div class="modal-acoes">
+
+                <button id="cancelarEdicao">
+                    Cancelar
+                </button>
+
+                <button id="salvarEdicao">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+
+    <div id="modalExcluir" class="modal">
+
+    <div class="modal-content modal-excluir">
+
+        <h2>Confirmar Exclusão</h2>
+
+        <p>
+            Tem certeza que deseja excluir este usuário?
+        </p>
+
+        <div class="modal-acoes">
+
+            <button id="cancelarExclusao">
+                Cancelar
+            </button>
+
+            <button id="confirmarExclusao">
+                Excluir
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/usuarios.js"></script>
+
+</div>
+
+</body>
+
+</html>

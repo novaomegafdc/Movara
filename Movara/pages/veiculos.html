@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movara - Veículos</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/veiculos.css">
+
+</head>
+<body>
+
+    <aside class="sidebar">
+
+        <h2>Movara</h2>
+
+        <nav>
+            <a href="dashboard.html">Visão Geral</a>
+
+            <a
+                href="veiculos.html"
+                class="active">
+                Veículos
+            </a>
+
+            <a href="entrada-saida.html">
+                Entrada/Saída
+            </a>
+
+            <a href="relatorios.html">
+                Relatórios
+            </a>
+
+            <a href="usuarios.html">
+                Usuários
+            </a>
+
+            <a href="../Index.html">
+                Sair
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Cadastro de Veículos</h1>
+
+        <form id="formVeiculo">
+
+            <input
+                type="text"
+                id="placa"
+                placeholder="Placa"
+                required>
+
+            <input
+                type="text"
+                id="modelo"
+                placeholder="Modelo"
+                required>
+
+            <input
+                type="text"
+                id="cor"
+                placeholder="Cor"
+                required>
+
+            <button type="submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Pesquisar placa...">
+
+        <div id="listaVeiculos"></div>
+
+    </main>
+
+
+    <div
+        id="modalExcluir"
+        class="modal">
+
+        <div class="modal-content">
+
+            <h3>
+                Confirmar exclusão
+            </h3>
+
+            <p id="textoModal"></p>
+
+            <div class="modal-acoes">
+
+                <button
+                    id="btnCancelar"
+                    class="btn-cancelar">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    id="btnConfirmar"
+                    class="btn-excluir">
+
+                    Excluir
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/veiculos.js"></script>
+
+</body>
+</html>

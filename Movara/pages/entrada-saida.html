@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movara - Entrada e Saída</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/entrada-saida.css">
+
+</head>
+
+<body>
+
+    
+    <aside class="sidebar">
+
+        <h2>Movara</h2>
+
+        <nav>
+            <a href="dashboard.html">Visão Geral</a>
+            <a href="veiculos.html">Veículos</a>
+            <a href="entrada-saida.html" class="active">Entrada/Saída</a>
+            <a href="relatorios.html">Relatórios</a>
+            <a href="usuarios.html">Usuários</a>
+            <a href="../Index.html">Sair</a>
+        </nav>
+
+    </aside>
+
+    
+    <main class="content">
+
+        <h1>Controle de Entrada e Saída</h1>
+
+        
+        <div class="painel-controle">
+
+            <select id="veiculoSelect">
+                <option value="">
+                    Selecione um veículo
+                </option>
+            </select>
+
+            <div class="acoes">
+
+                <button id="btnEntrada" class="btn-entrada">
+                    Registrar Entrada
+                </button>
+
+                <button id="btnSaida" class="btn-saida">
+                    Registrar Saída
+                </button>
+
+            </div>
+
+        </div>
+
+        
+        <h2>Histórico</h2>
+
+        <div id="historico"></div>
+
+    </main>
+
+    
+    <div id="toast-container"></div>
+
+    
+    <script src="../js/entrada-saida.js"></script>
+
+</body>
+</html>
